@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat Bot</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+@charset "utf-8";
+
+/* ---------- GENERAL ---------- */
+body {
+	background: #e9e9e9;
+	color: #9a9a9a;
+	margin: 0;
+	font-family: "segoe UI"
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 3%;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat .title {
+	font-size: 14px;
+	display: inline-block;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+	color: #000;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-close {
+	color: #fff;
+	float: right;
+	font-size: 22px;
+	height: 25px;
+}
+.chat-close:focus,
+.chat-close:hover {
+  color: #F44336;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 260px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message-content {
+	margin-left: 40px;
+}
+.chat-message-content p {
+  color: #fff;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 5px;
+}
+.chat-time {
+	float: right;
+	font-size: 10px;
+	color: #000;
+}
+
+.icon-avatar {
+  font-size: 20px;
+  float: left;
+  border-radius: 50%;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+.icon-user {
+  color: #513984;
+}
+.icon-bot {
+  color: #16A7AA;
+}
+
+.bot {
+  background-color: #16A7AA !important;
+}
+.user {
+  background-color: #513984 !important;
+}
+
+</style>
+
+</head>
+<body>
+
+	<div id="live-chat">
+	
+		<!-- Chat Heder -->
+		<header class="clearfix">
+			<h4 class="title">Customer Support</h4>
+			<a href="#" class="chat-close"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</header>
+		
+		<!-- Chat Body -->
+		<div class="chat">
+			
+			<div class="chat-history">
+				
+				<!-- Chat Message 1 -->
+				<div class="chat-message clearfix">
+					
+					<span class="glyphicon glyphicon-headphones icon-avatar icon-bot"></span>
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:35</span>
+
+						<h5>ChatBot</h5>
+
+						<p class="bot">Hi, Welcome. I am your personal Assistant , how may i help you?</p>
+
+					</div> 
+
+				</div> 
+				
+				<hr>
+
+				<!-- Chat Message 2 -->
+				<div class="chat-message clearfix">
+					
+					<span class="glyphicon glyphicon-user icon-avatar icon-user"></span>
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:37</span>
+
+						<h5>Leonardo</h5>
+
+						<p class="user">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+
+					</div> 
+
+				</div> 
+
+				<hr>
+
+				<!-- Chat Message 3 -->
+				<div class="chat-message clearfix">
+					
+					<span class="glyphicon glyphicon-headphones icon-avatar icon-bot"></span>
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:38</span>
+
+						<h5>ChatBot</h5>
+
+						<p class="bot">Thanks for contacting. I am happy to help you.</p>
+
+					</div> 
+
+				</div> 
+
+				<hr>
+				
+				<!-- Chat Message 4 -->
+				<div class="chat-message clearfix">
+					
+					<span class="glyphicon glyphicon-user icon-avatar icon-user"></span>
+
+					<div class="chat-message-content clearfix">
+						
+						<span class="chat-time">13:37</span>
+
+						<h5>Leonardo</h5>
+
+						<p class="user">Great. Thanks for your resolution. it helped a lot.</p>
+
+					</div> 
+
+				</div> 
+
+			</div> 
+			
+			<!-- Chat Footer -->
+			<form action="#" method="post">
+				<fieldset>
+					<input type="text" placeholder="Type your message..." autofocus>
+				</fieldset>
+			</form>
+
+		</div> 
+
+	</div> 
+
+	
+	
+</body>
+</html>
